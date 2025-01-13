@@ -4,8 +4,8 @@
 #include <cstdint>
 
 struct Vertex {
-    float x, y;
-    uint8_t r, g, b;
+    float x, y, z;
+    uint8_t r, g, b, a;
 };
 
 #endif

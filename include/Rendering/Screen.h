@@ -7,8 +7,7 @@
 
 class Screen {
 private:
-    Vertex* vertexbuffer;
-    uint32_t* framebuffer;
+    uint8_t* framebuffer;
     HDC hdc;
     BITMAPINFO bmi;
     HBITMAP h_bitmap;
@@ -18,8 +17,9 @@ public:
     int width;
     Screen() = default;
     Screen(int height, int width);
-    ~Screen() = default;
+    ~Screen();
     void set_pixel(int x, int y, Color color);
+    void clear();
     void display();
 };
 
